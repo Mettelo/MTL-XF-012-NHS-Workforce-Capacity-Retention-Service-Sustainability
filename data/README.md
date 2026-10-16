@@ -1,6 +1,6 @@
 # Data Guidance
 
-## Approved Core Files
+## Approved Core Release
 
 Use the **July 2026 NHS Workforce Statistics** release.
 
@@ -11,13 +11,13 @@ Core files:
 1. **Trusts and core organisations — CSV data files** (~30 MB ZIP)
 2. **Turnover — CSV data files** (~2 MB ZIP)
 
-Optional:
+Optional supporting files:
 3. **Turnover benchmarking — CSV data files** (~270 KB ZIP)
 4. **Data Quality Annex** (~173 KB XLSX)
 
-## What Goes in `data/raw/`
+## What to Put in `data/raw/`
 
-Prefer to keep the original downloaded ZIP files unchanged:
+Prefer to keep the original downloaded files unchanged:
 
 ```text
 data/raw/
@@ -27,44 +27,39 @@ data/raw/
 └── nhs-workforce-july-2026-data-quality-annex.xlsx     # optional
 ```
 
-Do not edit the raw ZIPs.
-
-Extract working CSVs outside the frozen raw copy or through reproducible code.
+Do not edit the raw ZIP files. Extract working CSVs through reproducible code or into a working/processed area.
 
 ## Recommended Analytical Scope
 
-Do **not** attempt to analyse every workforce dimension at once.
+Do **not** try to analyse every workforce dimension at once.
 
-Choose and document:
-- one manageable organisation group or selected organisations;
+Agree and document:
+- selected organisation(s) or organisation group;
 - selected staff groups;
 - the measures needed for FTE, headcount and turnover.
 
-If historical analysis is required, add only the additional monthly/annual files needed for the agreed trend question.
-
 ## Time Guidance
 
-The July 2026 publication is the **frozen reference release**.
+The July 2026 release is the frozen reference point.
 
-For longitudinal analysis:
-- use a clearly defined period;
-- recommended minimum: 12 months;
-- preferred: 24+ months where definitions remain comparable.
+For trend analysis:
+- minimum recommended history: **12 months**;
+- preferred: **24 months or more** where definitions remain comparable.
 
-Do not silently mix months with incompatible organisation structures or definitions.
+Only add historical releases needed for the agreed business question.
 
 ## Join Rule
 
-Core workforce and turnover extracts may not be joinable at every possible field combination.
+Core workforce and turnover extracts are not automatically compatible at every dimension.
 
 Before joining:
-- document grain for each source;
-- confirm compatible organisation/staff-group dimensions;
+- document the grain of each source;
+- confirm compatible organisation/staff-group fields;
 - reject unsupported joins.
 
-## Practical Working Pattern
+## Recommended Model
 
-Use the raw July release for reproducibility, then build:
+Build separate:
 - organisation reference table;
 - staff-group reference table;
 - workforce fact table;
@@ -73,4 +68,4 @@ Use the raw July release for reproducibility, then build:
 
 ## Optional Extension
 
-After the core model works, teams may automate retrieval of future workforce releases to demonstrate maintainability. The July 2026 frozen files remain the baseline for assessment.
+After the core solution works, teams may automate future NHS workforce releases. The July 2026 files remain the frozen assessment baseline.
