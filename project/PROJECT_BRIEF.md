@@ -1,49 +1,110 @@
 # Project Brief
 
-## Client Commission
-Leadership can see headline staffing totals but cannot consistently distinguish establishment pressure, FTE capacity, turnover, occupational shortages and organisation-level retention risk. Recruitment decisions are therefore being made without one governed evidence base.
+## Engagement Details
 
-The team has been commissioned to answer:
-
-> **Which workforce groups and organisations require the earliest intervention to protect service capacity, and should the response focus on recruitment, retention, workforce redesign or further investigation?**
-
-## Primary Dataset
-**NHS HCHS Workforce Statistics — July 2026, including core workforce and turnover extracts**  
-Publisher: NHS England  
-Official source: https://digital.nhs.uk/data-and-information/publications/statistical/nhs-workforce-statistics/july-2026
-
-## Required Delivery Lifecycle
-**Discovery → Requirements → Governance → Acquisition → Engineering → Data Quality → Analysis → Decision Framework → BI/Product → Assurance/UAT → Executive Recommendation → Handover**
-
-## Cross-Functional Roles
-| Role | Expected contribution |
+| Field | Detail |
 |---|---|
-| Business Analyst | Discovery, workforce decision process, requirements and acceptance criteria. |
-| Data Governance Analyst | Workforce glossary, critical fields, quality rules, ownership and lineage. |
-| Data Engineer | Ingest and model workforce and turnover extracts reproducibly. |
-| Workforce/Data Analyst | Analyse FTE, headcount, turnover, staff groups and organisation variation. |
-| BI Developer | Build workforce decision-support reporting and governed measures. |
-| Data Scientist / Forecaster | Develop transparent capacity/retention scenarios where justified. |
-| Model Governance / Assurance | Challenge forecast assumptions, validation and use boundaries. |
+| Project ID | MTL-XF-012 |
+| Project Title | NHS Workforce Capacity, Retention & Service Sustainability Intelligence |
+| Client | Confidential NHS Workforce & People Directorate |
+| Sector | NHS / Workforce / Service Planning |
+| Duration | 8 weeks |
+| Recommended Team Size | 6–8 |
+| Primary Sponsor | Director of Workforce |
+| Senior Stakeholders | Deputy Director of Workforce Planning, Recruitment Lead, Retention Lead, Operational Planning Lead, Finance Business Partner, Data Governance Lead, Workforce Intelligence Lead |
+| Primary Dataset | NHS HCHS Workforce Statistics — July 2026 core workforce and turnover extracts |
 
-## Core Business Questions
-1. What is the current baseline and where is material variation concentrated?
-2. Which definitions and data-quality issues could change the decision?
-3. What segments, organisations, products, areas or cohorts require deeper investigation?
-4. Which indicators are appropriate for prioritisation and which are not?
-5. What intervention options are supported by evidence?
-6. How should management monitor the decision after handover?
+## 1. Client Situation
 
-## Success Criteria
-- traceable requirements and acceptance criteria;
-- governed definitions, ownership, lineage and quality rules;
-- reproducible ingestion/transformation;
-- defensible FTE/headcount capacity, workforce mix, turnover, organisational variation, occupational pressure and sustainability indicators;
-- transparent prioritisation logic;
-- useful decision-support product;
-- UAT/assurance evidence;
-- executive recommendation and handover;
-- visible team contribution.
+Leadership can see headline staffing totals, but workforce decisions are made across separate reports for headcount, FTE, staff group and turnover. The directorate cannot consistently identify where capacity is genuinely deteriorating, where turnover is persistent, or whether apparent shortages reflect workforce mix rather than absolute staffing levels.
 
-## Review Panel
-Mettelo reviewers may challenge requirements, definitions, quality, analytical assumptions, thresholds, model use, governance, usability, recommendations and maintainability.
+## 2. Business Decision
+
+The team has been commissioned to provide evidence for this decision:
+
+> **Which workforce groups and organisations require the earliest intervention to protect service capacity, and is the evidence more consistent with recruitment pressure, retention pressure, workforce-mix change or a need for further investigation?**
+
+The project succeeds only if the final solution helps stakeholders make or structure this decision; producing charts without a decision framework is insufficient.
+
+## 3. Agreed Objectives
+
+1. Create a governed workforce model combining core workforce and turnover measures at an agreed organisational/staff-group grain.
+2. Separate headcount, FTE and turnover concepts so leadership does not use them interchangeably.
+3. Identify persistent workforce pressure by organisation and staff group using transparent comparison rules.
+4. Develop scenario-based workforce sustainability indicators without presenting them as clinical safe-staffing measures.
+5. Provide workforce leaders with a repeatable decision-support product and monitoring framework.
+
+## 4. Key Business Questions
+
+1. Where are FTE levels changing materially over time or relative to comparable organisations/staff groups?
+2. Which staff groups show persistent turnover pressure rather than a one-month movement?
+3. Where do headcount and FTE tell different stories about capacity?
+4. Which organisations combine weak workforce growth with elevated turnover?
+5. Which data/publication changes limit longitudinal comparison?
+6. What indicators should trigger workforce investigation rather than automatic intervention?
+
+## 5. Cross-Functional Delivery Model
+
+| Role | Minimum expected output |
+|---|---|
+| Business Analyst | Produce workforce decision map, stakeholder requirements, user stories, scope and acceptance criteria. |
+| Data Governance Analyst | Define workforce glossary, critical fields, organisation/staff-group reference rules, lineage and DQ controls. |
+| Data Engineer | Build reproducible preparation of workforce and turnover extracts and a consistent analytical model. |
+| Workforce/Data Analyst | Own FTE/headcount/turnover trend and peer-comparison analysis. |
+| BI Developer | Build governed workforce sustainability reporting and drill-down. |
+| Data Scientist / Forecaster | Develop simple scenario/forecast component where justified and benchmark it against a naive baseline. |
+| Model Governance / Assurance Analyst | Challenge forecasting assumptions, uncertainty, subgroup effects and use boundaries. |
+
+Responsibilities may be combined in a smaller team, but ownership and evidence must remain explicit.
+
+## 6. Minimum Delivery Standard
+
+The team must demonstrate:
+
+- traceable requirements from stakeholder need to delivered feature/KPI;
+- documented governance for critical fields and measures;
+- preserved raw source data and reproducible transformations;
+- explicit data-quality tests and reconciliation;
+- analytical outputs that answer the commissioned questions;
+- transparent decision/prioritisation logic;
+- a stakeholder-facing product built from approved metrics;
+- assurance/UAT evidence;
+- technical and operational handover;
+- GitHub evidence of genuine multidisciplinary collaboration.
+
+## 7. Constraints and Interpretation Rules
+
+- Published workforce statistics do not measure safe staffing, service quality or individual performance.
+- Turnover does not by itself identify why people leave or whether departures are avoidable.
+- Headcount and FTE must not be combined or compared without clear definition.
+- Organisation restructures and code changes can distort longitudinal comparisons.
+- Any forecast/scenario is planning support and must show uncertainty and assumptions.
+
+## 8. Agreed Success Criteria
+
+The detailed acceptance tests are in `ACCEPTANCE_CRITERIA.md`. At minimum:
+
+- Core workforce and turnover datasets are joined only at a documented compatible grain; unsupported joins are explicitly rejected.
+- Headcount and FTE are separately defined and no KPI silently mixes the two.
+- At least three longitudinal validation checks reconcile derived values to published/source totals where feasible.
+- Organisation/staff-group code changes or discontinuities affecting trend analysis are documented.
+- If forecasting is used, a naive baseline and time-aware validation are included and uncertainty is shown.
+- No output is described as a safe-staffing judgement or direct measure of care quality.
+
+## 9. Out of Scope
+
+Unless explicitly justified as an extension, the core engagement does not require:
+
+- paid production infrastructure;
+- confidential client data;
+- automated operational decisions;
+- unsupported causal inference;
+- a production-grade public application.
+
+## 10. Final Review
+
+The Mettelo review panel may challenge source handling, definitions, reconciliation, analytical methods, thresholds, usability, governance, recommendations and whether the evidence actually supports the commissioned decision.
+
+### Reproducibility definition
+
+A reviewer should be able to clone the team repository, obtain the documented approved source data, execute the documented workflow and reproduce the curated analytical outputs and validation evidence without undocumented manual changes.

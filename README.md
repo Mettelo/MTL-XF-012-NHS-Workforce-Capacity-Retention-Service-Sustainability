@@ -4,19 +4,30 @@
 
 | Field | Detail |
 |---|---|
+| Project ID | MTL-XF-012 |
 | Client | Confidential NHS Workforce & People Directorate |
 | Sector | NHS / Workforce / Service Planning |
 | Duration | 8 weeks |
-| Recommended team | 6–8 |
-| Sponsor | Director of Workforce |
+| Recommended Team Size | 6–8 |
+| Primary Sponsor | Director of Workforce |
 | Engagement | Simulated confidential-client engagement |
 
-Leadership can see headline staffing totals but cannot consistently distinguish establishment pressure, FTE capacity, turnover, occupational shortages and organisation-level retention risk. Recruitment decisions are therefore being made without one governed evidence base.
+> The client is simulated. This project uses official public/open data to recreate a realistic multidisciplinary delivery environment.
 
-**Commissioned decision:** Which workforce groups and organisations require the earliest intervention to protect service capacity, and should the response focus on recruitment, retention, workforce redesign or further investigation?
+## Commission
 
-This is an end-to-end multidisciplinary engagement, not a dashboard-only exercise.
+Leadership can see headline staffing totals, but workforce decisions are made across separate reports for headcount, FTE, staff group and turnover. The directorate cannot consistently identify where capacity is genuinely deteriorating, where turnover is persistent, or whether apparent shortages reflect workforce mix rather than absolute staffing levels.
 
-Start with [Project Brief](project/PROJECT_BRIEF.md), [Business Context](project/BUSINESS_CONTEXT.md), [Deliverables](project/DELIVERABLES.md), [Governance](project/GOVERNANCE.md), [Data](data/README.md) and [Submission Guide](submission/SUBMISSION_GUIDE.md).
+**Decision to support:** Which workforce groups and organisations require the earliest intervention to protect service capacity, and is the evidence more consistent with recruitment pressure, retention pressure, workforce-mix change or a need for further investigation?
 
-Each team creates its delivery repository under the **Mettelo GitHub organisation** and adds every team member using their individual GitHub account.
+This is not a dashboard-only exercise. The team is expected to deliver discovery, requirements, governance, engineering, analytical assessment, decision support, assurance/UAT and handover.
+
+## Start Here
+- [Project Brief](project/PROJECT_BRIEF.md)
+- [Business Context](project/BUSINESS_CONTEXT.md)
+- [Deliverables](project/DELIVERABLES.md)
+- [Acceptance Criteria](project/ACCEPTANCE_CRITERIA.md)
+- [Governance](project/GOVERNANCE.md)
+- [Data Workspace](data/README.md)
+- [Source Register](data/SOURCE_REGISTER.md)
+- [Submission Guide](submission/SUBMISSION_GUIDE.md)

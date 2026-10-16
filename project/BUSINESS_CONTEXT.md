@@ -1,31 +1,37 @@
 # Business Context
 
-## Simulated Client
+## Client
 **Confidential NHS Workforce & People Directorate**
 
-## Business Pressure
-Leadership can see headline staffing totals but cannot consistently distinguish establishment pressure, FTE capacity, turnover, occupational shortages and organisation-level retention risk. Recruitment decisions are therefore being made without one governed evidence base.
+## Current Problem
+Leadership can see headline staffing totals, but workforce decisions are made across separate reports for headcount, FTE, staff group and turnover. The directorate cannot consistently identify where capacity is genuinely deteriorating, where turnover is persistent, or whether apparent shortages reflect workforce mix rather than absolute staffing levels.
 
-## Executive Decision
-**Which workforce groups and organisations require the earliest intervention to protect service capacity, and should the response focus on recruitment, retention, workforce redesign or further investigation?**
+## Decision Owner
+**Director of Workforce**
 
-## Stakeholders
-- **Director of Workforce:** accountable sponsor and decision owner.
-- **Operational/Service Lead:** validates practical usability.
-- **Data Owner/Steward:** challenges source authority, quality and definitions.
-- **Finance/Risk/Performance stakeholder:** tests materiality and intervention logic.
-- **Data & Analytics Lead:** owns technical quality and maintainability.
-- **End users:** participate in UAT.
+## Senior Stakeholders
+Deputy Director of Workforce Planning, Recruitment Lead, Retention Lead, Operational Planning Lead, Finance Business Partner, Data Governance Lead, Workforce Intelligence Lead
 
-## Delivery Roles
-| Role | Expected contribution |
+## Decision to Support
+**Which workforce groups and organisations require the earliest intervention to protect service capacity, and is the evidence more consistent with recruitment pressure, retention pressure, workforce-mix change or a need for further investigation?**
+
+## Role Responsibilities
+| Role | Required contribution |
 |---|---|
-| Business Analyst | Discovery, workforce decision process, requirements and acceptance criteria. |
-| Data Governance Analyst | Workforce glossary, critical fields, quality rules, ownership and lineage. |
-| Data Engineer | Ingest and model workforce and turnover extracts reproducibly. |
-| Workforce/Data Analyst | Analyse FTE, headcount, turnover, staff groups and organisation variation. |
-| BI Developer | Build workforce decision-support reporting and governed measures. |
-| Data Scientist / Forecaster | Develop transparent capacity/retention scenarios where justified. |
-| Model Governance / Assurance | Challenge forecast assumptions, validation and use boundaries. |
+| Business Analyst | Produce workforce decision map, stakeholder requirements, user stories, scope and acceptance criteria. |
+| Data Governance Analyst | Define workforce glossary, critical fields, organisation/staff-group reference rules, lineage and DQ controls. |
+| Data Engineer | Build reproducible preparation of workforce and turnover extracts and a consistent analytical model. |
+| Workforce/Data Analyst | Own FTE/headcount/turnover trend and peer-comparison analysis. |
+| BI Developer | Build governed workforce sustainability reporting and drill-down. |
+| Data Scientist / Forecaster | Develop simple scenario/forecast component where justified and benchmark it against a naive baseline. |
+| Model Governance / Assurance Analyst | Challenge forecasting assumptions, uncertainty, subgroup effects and use boundaries. |
 
-The intended organisational outcome is a trusted, repeatable decision process rather than a one-off report.
+## Expected Organisational Outcome
+
+The intended result is a governed, repeatable decision process. The BI product is one delivery component; it is not the project outcome by itself.
+
+## Evidence Chain
+
+**Requirement → governed field/definition → transformation → quality control → metric/analysis → decision insight → recommendation → UAT/acceptance**
+
+Every major recommendation should be traceable through this chain.
